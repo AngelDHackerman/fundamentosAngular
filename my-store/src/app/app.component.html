@@ -11,6 +11,12 @@
   <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, nesciunt porro, possimus officiis animi dicta similique beatae rem, iusto ab voluptas! Magnam ipsa rerum ex, inventore vel animi fugiat. Totam!</span><span>Perferendis enim officia ullam quibusdam temporibus iusto magnam, beatae, recusandae delectus tempora nostrum rem laudantium laborum fuga, sequi non eligendi fugit. Doloremque, eligendi a dolor possimus deleniti dolores odit vitae.</span><span>Officia, illum minima. Eaque veniam dolore ad numquam eius consequuntur. Necessitatibus quidem a quos iusto est! Omnis at, ad delectus quas, ratione in libero, dicta cum nobis perspiciatis officia. Repellat.</span><span>Non, quam reprehenderit expedita, at officiis necessitatibus minus qui eaque deserunt voluptatum quis. Fugiat recusandae nihil alias, commodi ut, magni est, nostrum maxime minus repellendus facere provident expedita quae iste?</span><span>Cupiditate unde mollitia perferendis eum illo quibusdam earum neque et eveniet, laborum molestias reiciendis corrupti ipsam deserunt quidem nesciunt sunt consequuntur eius blanditiis eligendi fuga temporibus! Est temporibus tenetur consequatur.</span></p>
 </div>
 
+<!-- * keyup element y cambiando el nombre en tiempo real -->
+
+<p>Nombre: {{ person.name }}</p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)">
+
+<hr>
 
 <!-- ! Event Binding Angular -->
 
