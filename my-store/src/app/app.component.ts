@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   name = 'Angel';
@@ -21,5 +21,9 @@ export class AppComponent {
   increaseAge () {
     this.person.age += 1;
     this.age += 1;
+  }
+  onScroll (event: Event) { // ? (event: Event) con esto podemos capturar el evento que nos esta enviando Angular con Event
+    const element = event.target as HTMLElement; // ? el "target" es el elemento HTML  y esto significa que se el evento se va a comportar como un HTML Element
+    console.log(element.scrollTop); // ? con esto vemos en que posicion esta el scroll.
   }
 }

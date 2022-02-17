@@ -1,9 +1,31 @@
 <!--  Todo lo que esta dentro de los {{}} viene del archivo app.components.ts -->
 
-      <!-- ! String interpolation  -->
+<!-- ! Otros eventos en Binding Angular -->
+
+<h1>Otros eventos en Binding Angular</h1>
+<button [disabled]="btnDisabled">Enviar</button>
+<button (click)="toggleButton()">Toggle Button</button>
+<p> Edad {{ person.age }}</p>
+<button (click)="increaseAge()">Age ++ </button>
+<div class="box" (scroll)="onScroll($event)"> <!-- todo/ onScroll($event) con el simbolo de $ es como se le pasan los eventos como parametros -->
+  <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, nesciunt porro, possimus officiis animi dicta similique beatae rem, iusto ab voluptas! Magnam ipsa rerum ex, inventore vel animi fugiat. Totam!</span><span>Perferendis enim officia ullam quibusdam temporibus iusto magnam, beatae, recusandae delectus tempora nostrum rem laudantium laborum fuga, sequi non eligendi fugit. Doloremque, eligendi a dolor possimus deleniti dolores odit vitae.</span><span>Officia, illum minima. Eaque veniam dolore ad numquam eius consequuntur. Necessitatibus quidem a quos iusto est! Omnis at, ad delectus quas, ratione in libero, dicta cum nobis perspiciatis officia. Repellat.</span><span>Non, quam reprehenderit expedita, at officiis necessitatibus minus qui eaque deserunt voluptatum quis. Fugiat recusandae nihil alias, commodi ut, magni est, nostrum maxime minus repellendus facere provident expedita quae iste?</span><span>Cupiditate unde mollitia perferendis eum illo quibusdam earum neque et eveniet, laborum molestias reiciendis corrupti ipsam deserunt quidem nesciunt sunt consequuntur eius blanditiis eligendi fuga temporibus! Est temporibus tenetur consequatur.</span></p>
+</div>
+
+
+<!-- ! Event Binding Angular -->
+
+<h1>Eventos Binding Angular</h1>
+<button [disabled]="btnDisabled">Enviar</button>
+<button (click)="toggleButton()">Toggle Button</button> <!-- ? (click)="" asi es como se capturan los eventos y debemos crear un metodo  -->
+<p> Edad {{ person.age }}</p>
+<button (click)="increaseAge()">Age ++ </button>
 
 <hr>
-<h1>Hola mundo!</h1>
+
+<!-- ! String interpolation  -->
+
+
+<h1>String interpolation</h1>
 
 <h2>{{'Hola mundo!!! '.repeat(5)}}</h2> <!-- .repeate(n) hace que se repita el string n numero de veces -->
 
@@ -18,7 +40,7 @@
       <!-- ! Binding -->
 
 
-<h1>Propiedades</h1>
+<h1>Binding</h1>
 <button [disabled]="btnDisabled">Enviar</button> <!-- ? Esto esta configurado con un binding -->
 <input type="text" [value]="name"> <!-- ? [atributo=""] es como se crean los binding -->
 <progress max="100" [value]="age"></progress> <!-- Esto muestra una barra de progreso nativa de HTML -->
@@ -26,22 +48,17 @@
 
 <hr>
 
+    <!-- ! Usando propiedades de objetos -->
+
 <h1>Propiedades esta vez usando Objetos</h1>
 <button [disabled]="btnDisabled">Enviar</button>
 <input type="text" [value]="person.name"> <!-- ! [value]="person.name" aqui accedemos al binding de la misma forma en que accedemos a los objetos en JS  -->
 <progress max="100" [value]="person.age"></progress>
 <img width="100" [src]="person.avatar">
 
-<hr>\
+<hr>
 
 
-      <!-- ! Event Binding Angular -->
-
-<h1>Eventos</h1>
-<button [disabled]="btnDisabled">Enviar</button>
-<button (click)="toggleButton()">Toggle Button</button> <!-- ? (click)="" asi es como se capturan los eventos y debemos crear un metodo  -->
-<p> Edad {{ person.age }}</p>
-<button (click)="increaseAge()">Age ++ </button>
 
 
 
