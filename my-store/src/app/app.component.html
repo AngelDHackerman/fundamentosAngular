@@ -1,5 +1,21 @@
 <!--  Todo lo que esta dentro de los {{}} viene del archivo app.components.ts -->
 
+<!-- ! NG Model, hace lo mismo que el binding Angular pero nos ahorramos lo del evento -->
+<!-- ? El Ng Model y el data Binding es una fucion entre el property Binding y el event binding -->
+<!-- ? Para que funcione el NgModel tenemos que habilitar el modulo/paquete de formularios -->
+
+<h1>NgModel</h1>
+<p>Nombre: {{ person.name }}</p>
+
+<input type="text" required #nameImput="ngModel" [(ngModel)]="person.name"> <!-- * Debemos habilitar el formModules en el app.modules.ts -->
+<p>Valid: {{ nameImput.valid}}</p> <!-- * #nameImput="ngModel" necesario para decir que es un ngModel y poder verificar si es valido  -->
+
+<p>Age {{ person.age }}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age" />
+<p>Valid: {{ ageInput.valid }}</p>
+
+<hr>
+
 <!-- ! Otros eventos en Binding Angular -->
 
 <h1>Otros eventos en Binding Angular</h1>
@@ -16,7 +32,7 @@
 <p>Nombre: {{ person.name }}</p>
 <input type="text" [value]="person.name" (keyup)="changeName($event)">
 
-<hr>
+<hr>\
 
 <!-- ! Event Binding Angular -->
 
