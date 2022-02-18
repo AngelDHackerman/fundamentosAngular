@@ -1,5 +1,22 @@
 <!--  Todo lo que esta dentro de los {{}} viene del archivo app.components.ts -->
 
+<!-- ! ngIf, es para hacer validaciones tipo If en el ngModel -->
+
+<h1>*ngIf</h1>
+
+<input type="text" required [(ngModel)]="person.name"> <!-- [(ngModel)]="person.name" esto es el ngModel y significa que va estar linkeado al person.name-->
+<p *ngIf="person.name === 'Angel'">Soy Angel</p> <!-- si person.name === angel se mostrara :"Soy angel" -->
+<p *ngIf="person.name === 'Julian' && person.age >= 18 else elseBlock ">Soy Julian</p>
+<!-- ? Asi se hacen las validaciones tipo else: else elseBlock y lo de abajo es el resultado si caemos en el else-->
+<ng-template #elseBlock>
+  <p>Bloque de else </p>
+</ng-template>
+
+
+<hr>
+
+
+
 <!-- ! NG Model, hace lo mismo que el binding Angular pero nos ahorramos lo del evento -->
 <!-- ? El Ng Model y el data Binding es una fucion entre el property Binding y el event binding -->
 <!-- ? Para que funcione el NgModel tenemos que habilitar el modulo/paquete de formularios -->
