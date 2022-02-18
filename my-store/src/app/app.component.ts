@@ -16,6 +16,9 @@ export class AppComponent {
     avatar: 'https://source.unsplash.com/random',
   }
 
+  names: string [] = ['Angel', 'Nicolas', 'Santiago', 'Alejandro', 'Dario'];
+  newName = '';
+
   toggleButton () {
     this.btnDisabled = !this.btnDisabled; // ! Asi se crea un button toggle
   }
@@ -33,5 +36,14 @@ export class AppComponent {
   changeName (event: Event) {
     const element = event.target as HTMLInputElement; // ? el "target" se comportara como un input, osea tendra valores input
     this.person.name = element.value;
+  }
+
+  addName () {
+    this.names.push(this.newName);
+    this.newName = ''; // ! Asi limpiamos el input para ingreasr un nuevo nombre;
+  }
+
+  deleteName (index: number) {
+    this.names.splice(index, 1);
   }
 }
