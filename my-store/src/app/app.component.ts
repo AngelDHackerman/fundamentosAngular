@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Product } from './product.model'; // ! Asi se importan las interfaces desde otros archivos
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,6 +20,40 @@ export class AppComponent {
 
   names: string [] = ['Angel', 'Nicolas', 'Santiago', 'Alejandro', 'Dario'];
   newName = '';
+  products: Product [] = [
+    {
+      name: 'El mejor juguete',
+      price: 565,
+      image: 'https://source.unsplash.com/random',
+      category: 'Bizzard', // ? Propiedad opcional (ver el product.model.ts)
+    },
+    {
+      name: 'bicileta nueva',
+      price: 356,
+      image: 'https://source.unsplash.com/random',
+    },
+    {
+      name: 'collecion de albunes',
+      price: 34,
+      image: 'https://source.unsplash.com/random',
+    },
+    {
+      name: 'Mis libros',
+      price: 23,
+      image: 'https://source.unsplash.com/random',
+    },
+    {
+      name: 'El mejor juguete V2.0',
+      price: 100,
+      image: 'https://source.unsplash.com/random',
+    },
+    {
+      name: 'play station 7',
+      price: 56500,
+      image: 'https://source.unsplash.com/random',
+    },
+
+  ];
 
   toggleButton () {
     this.btnDisabled = !this.btnDisabled; // ! Asi se crea un button toggle

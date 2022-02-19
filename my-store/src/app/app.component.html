@@ -1,5 +1,22 @@
 <!--  Todo lo que esta dentro de los {{}} viene del archivo app.components.ts -->
 
+
+<!-- ! ngFor para Arrays -->
+
+<h1>*ngFor para Arrays</h1>
+<div>
+  <div *ngFor="let prodruct of products"> <!-- ? asi es como se hacen las iteraciones en los arrays. -->
+    <img [src]="prodruct.image" alt="imagen random" width="200" height="200">
+    <h2>Su precio es: {{ prodruct.price }}</h2>
+    <p>{{ prodruct.name }}</p>
+  </div>
+</div>
+
+
+
+<hr>
+
+
 <!-- ! *ngFor -->
 
 <h1>*ngFor</h1>
