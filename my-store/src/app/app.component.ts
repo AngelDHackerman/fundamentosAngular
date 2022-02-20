@@ -8,6 +8,7 @@ import { Product } from './product.model'; // ! Asi se importan las interfaces d
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 50;
   name = 'Angel';
   age = 18;
   img = 'https://source.unsplash.com/random';

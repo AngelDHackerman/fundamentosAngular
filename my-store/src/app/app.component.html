@@ -1,5 +1,29 @@
 <!--  todo/ lo que esta dentro de los {{}} viene del archivo app.components.ts -->
 
+<!-- ! Class & Style  -->
+
+<h1>Class & Style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name" >
+<p class="message-error" [class.activado]="nameInput2.invalid"> <!-- ! si nameInput2 es invalido nos dara un true, y si nos da true va activar la clase .activado -->
+  El campo es requerido
+</p>
+
+<label for="nameInput3">Nombre </label> <!-- Si usamos esto: [style.font-style]="nameInput3.invalid ? 'italic' : 'normal', antes de que sea declarado vamos a tener un error, algo similar al "hosting" de javaScript -->
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name">
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Lorem ipsum dolor sit amet.</p> <!-- ? si nameInput3 es invalido nos dara un true, y si nos da true va cambiar los estilos usando el [style.font-style], luego usando el ternario si es "true", usara Italic si es "false", usara normal. Con esto modificamos los estilos de forma directa, no usando clases -->
+
+<div class="styleDeImagen">
+  <div>
+    <input type="text" [(ngModel)]="widthImg" > <!-- Estamos escuchando la variable widthImg en app.component.ts -->
+  </div>
+  <div>
+    <img [style.width.px]="widthImg" [src]="img" > <!-- ? [style.width.px]="widthImg" modificamos el width usando px pasandole el valor que tiene widthImg -->
+  </div>
+</div>
+
+
+<hr/>
+
 <!-- ! ngSwitch -->
 
 <h1>ngSwitch</h1>
@@ -31,8 +55,8 @@
   La persona es Alejandro
 </p> -->
 
-
 <hr>
+
 
 <!-- ! ngFor para Arrays -->
 

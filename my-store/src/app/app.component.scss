@@ -1,11 +1,5 @@
           // ! Esto es mobile first
 
-* {
-  border: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}
-
 .box {
   height: 200px;
   width: 200px;
@@ -23,6 +17,19 @@
       border-radius: 10px;
     }
   }
+}
+.message-error {
+  background: red;
+  color: white;
+  opacity: 0; // ? Asi volvemos INVISIBLE lo que este dentro de la clase .message-error
+  transition: all linear .5s; // agregamos una transicion a todos los elementos "all"
+  &.activado {  // * Si .message-error tambien tiene la clase .activadose le agregara el codigo que esta dentro de las llaves
+    opacity: 1; // ? Asi volvemos VISIBLE lo que este en la clase.
+  }
+}
+.styleDeImagen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
         // ! 40em es la medida estandar para tablets en adelante
