@@ -1,5 +1,41 @@
 <!--  Todo lo que esta dentro de los {{}} viene del archivo app.components.ts -->
 
+<!-- ! ngSwitch -->
+
+<h1>ngSwitch</h1>
+<p>Prueba introduciendo 'Angel D', 'Julia', 'Alejandro' o cualquier otro para ver el default</p>
+<input type="text" required [(ngModel)]="person.name" />
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Angel D'">
+    La persona es Angel Dario
+  </p>
+  <p *ngSwitchCase="'Julia'">
+    La persona es Julia
+  </p>
+  <p *ngSwitchCase="'Alejandro'">
+    La persona es Alejandro
+  </p>
+  <p *ngSwitchDefault>
+    No hace match con ninguno
+  </p>
+</div>
+
+
+<!-- <p *ngIf="person.name === 'Angel D'">
+  La persona es Angel Dario
+</p>
+<p *ngIf="person.name === 'Daniel'">
+  La persona es Daniel
+</p>
+<p *ngIf="person.name === 'Alejandro'">
+  La persona es Alejandro
+</p> -->
+
+
+
+
+
+<hr>
 
 <!-- ! ngFor para Arrays -->
 
