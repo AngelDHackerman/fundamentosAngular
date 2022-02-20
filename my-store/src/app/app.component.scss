@@ -1,6 +1,47 @@
+          // ! Esto es mobile first
+
+* {
+  border: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 .box {
   height: 200px;
   width: 200px;
   overflow: auto;
   background: red;
+}
+.products--grid {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  div { // ? Como es Sass podemos anidar las propiedadesj, TAMBIEN sobrescribe los valores puestos en component.html
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+}
+
+        // ! 40em es la medida estandar para tablets en adelante
+
+@media screen and (min-width: 40em) {
+  .products--grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+}
+
+
+    // ! 1024px para pantallas desktop
+
+@media screen and (min-width: 1024px) {
+  .products--grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+  }
 }
