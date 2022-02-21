@@ -13,6 +13,11 @@ export class AppComponent {
   age = 18;
   img = 'https://source.unsplash.com/random';
   btnDisabled = true; // ? Esto lo vamos a configurar con Biding de propiedad
+  register = { // ? Formulario
+    name: '',
+    email: '',
+    password: '',
+  }
   person = {
     name: 'Angel D',
     age: 26,
@@ -87,5 +92,9 @@ export class AppComponent {
 
   deleteName (index: number) {
     this.names.splice(index, 1);
+  }
+
+  onRegister () {
+    console.log(this.register)
   }
 }

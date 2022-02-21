@@ -1,5 +1,34 @@
 <!--  todo/ lo que esta dentro de los {{}} viene del archivo app.components.ts -->
 
+<!-- ! Formulario -->
+
+<h1>Formulario</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm"> <!-- ? #myForm es template variable -->
+  <div class="input-group">
+    <label for="name">Nombre</label>
+    <input type="text" required name="name" id="name" [(ngModel)]="register.name" /> <!-- ? name="name" con name="" arreglamos el error que angular nos daba en consola -->
+    <p>Mensajes de error</p>
+  </div>
+
+  <div class="input-group">
+    <label for="email">Email</label>
+    <input type="email" required name="email" id="email" [(ngModel)]="register.email" />
+    <p>Mensajes de error</p>
+  </div>
+
+  <div class="input-group">
+    <label for="password">Password</label>
+    <input type="password" required name="password" id="password" [(ngModel)]="register.password" />
+    <p>Mensajes de error</p>
+  </div>
+  <!-- todo/ Siempre que se ponen botones dentro del formulario se debe obligatoriamente colocar el "type" de boton que es -->
+  <button [disabled]="myForm.invalid" type="submit">Registrar</button> <!-- * [disabled]="myForm.invalid" si el formulario no es valido el boton estara desabilidado -->
+  <button type="button">Accion</button>
+</form>
+
+
+<hr>
+
 <!-- ! NgClass & NgStyle, -->
 
 <!-- ? el ngClass es como un "arreglo de condiciones" podemos usar cuantas condiciones queramos para agregar la clase que necesitemos " -->
