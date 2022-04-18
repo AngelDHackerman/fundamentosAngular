@@ -22,4 +22,4 @@
 
 ## Dentro de nuestro proyecto debemos agregar el siguiente archivo: 
 
-  `.nvmrc` Si estas trabajando con diferentes versiones de Node, va indicar cual es la version de Node recomendada para correr este proyecto. 
+  `.nvmrc` Si estas trabajando con diferentes versiones de Node, va indicar cual es la version de Node recomendada para correr este proyecto. (COPIA Y PEGA la version de Node que estas usando para el proyecto).
