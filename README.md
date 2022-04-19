@@ -47,9 +47,25 @@ Es la forma que desde la logica podemos pasar datos a renderizar a nuestro templ
 Es similar a usar el \`${ }\` que usamos en javaScript.
 Las propiedads vienen del **app.componet.ts** y deben tener visibilidad public para que funcione.
 
+0. Ejemplos: 
+
 {{ 1 + 1 }}
 
 {{myVariable}}
 
 {{ myFunction() }}
+
+
+
+## Property \[Binding\] :
+
+Es la forma en la que podemos MODIFICAR atributos, tambien desde el controlador "app.component.ts" y mandarle esto a los atributos de HTML.
+
+Ejemplo: el tag de una imagen, el hre='' de un link, el estado de un boton.
+
+0. Ejemplos: 
+
+<button [disabled]="btnDisable">Enviar</button>
+<input type="text" [value]="name">
+
 
