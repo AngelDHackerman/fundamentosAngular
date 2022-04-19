@@ -70,3 +70,17 @@ Ejemplo: el tag de una imagen, el hre='' de un link, el estado de un boton.
 `<input type="text" [value]="name">`
 
 
+## Event \(Binding\) : 
+
+Asi es como se manejan los eventos en Angular
+
+
+0. Ejemplos: 
+
+```
+
+<button (click)="onSave()">
+  Save
+</button>
+
+```
