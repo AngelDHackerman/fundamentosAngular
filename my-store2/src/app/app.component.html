@@ -1,10 +1,18 @@
+<h1>Eventos</h1>
+
+<button [disabled]="btnDisabled">Enviar</button>
+<button (click)="toggleButton()">Toggle Button</button>
+
+<p>Edad {{ person.age }}</p>
+<button (click)="ageIncrease()">Age ++</button>
+<button (click)="ageDecrease()">Age --</button>
 
 <hr>
 
 
 <h1>Property binding, bueno para modificar propiedades de html</h1>
 
-<button [disabled]="btnDisable">Enviar</button>
+<button [disabled]="btnDisabled">Enviar</button>
 <input type="text" [value]="person.name">
 
 <progress max="100" [value]="person.age"></progress>
