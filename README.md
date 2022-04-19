@@ -15,6 +15,10 @@
 ## Creando la primer aplicacion: 
  **comando:** `ng new appName`
 
+`Angular routing? Y`  yes para angular routing.
+
+
+
 1. nos movemos a la carpeta creada con el nombre que le dimos.
 2. `ng serve` ejecuta un servidor para ver nuestro proyecto ya vivo.
   `ng serve -o` *para abrir el navedador por defecto*.
