@@ -44,7 +44,8 @@ archivo de configuracion para el editor de codigo.
 ## String interpolation: 
 
 Es la forma que desde la logica podemos pasar datos a renderizar a nuestro template. 
-Es similar a usar el \`${}\`
+Es similar a usar el \`${ }\` que usamos en javaScript.
+Las propiedads vienen del **app.componet.ts** y deben tener visibilidad public para que funcione.
 
 {{ 1 + 1 }}
 
