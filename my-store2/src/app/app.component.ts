@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-store2';
+  public name = 'Angel';    // ? Por defecto la visibilidad es public
+  public age = 26;
 }

@@ -39,3 +39,16 @@ archivo de configuracion para el editor de codigo.
 **Tip:** instalar el plugin de editorconfig para que este archivo funcione correctamente.
 
 
+
+
+## String interpolation: 
+
+Es la forma que desde la logica podemos pasar datos a renderizar a nuestro template. 
+Es similar a usar el \`${}\`
+
+{{ 1 + 1 }}
+
+{{myVariable}}
+
+{{ myFunction() }}
+
