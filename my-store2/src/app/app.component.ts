@@ -12,4 +12,9 @@ export class AppComponent {
   public img = 'https://http.cat/100.jpg';
 
   btnDisable = true;
+  person = {
+    name: 'Angel',
+    age: 26,
+    avatar: 'https://http.cat/506.jpg'
+  }
 }
