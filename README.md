@@ -79,8 +79,16 @@ Asi es como se manejan los eventos en Angular
 
 ```
 
-<button (click)="onSave()">
-  Save
-</button>
+<button (click)="onSave()"> Save </button>
+
+<div class="box" (scroll)="scrollPage()">
+
+<div class="box" (scroll)="onScroll($event)">
 
 ```
+
+**Importante!!!** Hay que notar que en el evento scroll se le pasa el paramentro `($event)` esto pasa cuando manipulamos eventos diferentes al click en elemntos como los div o los input.
+
+`const element = event.target as HTMLElement;` para los <\div\ >
+
+`const element = event.target as HTMLInputElement;` para los <\input\ >

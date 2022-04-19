@@ -34,4 +34,14 @@ export class AppComponent {
     }
   }
 
+  onScroll (event: Event) { // el parametro es de tipo Event
+    const element = event.target as HTMLElement;    // ! Esto es porque es un <div> si fuera un input seria diferente
+    console.log(element.scrollTop);   // * leemos en que position esta el scroll
+  }
+
+  changeName (event: Event) {
+    const element = event.target as HTMLInputElement; // ! Asi se colocan cuando son elementos input
+    this.person.name = element.value;   // * Leemos lo que esta en el input y al mismo tiempo cambiamos el valor del person.name
+  }
+
 }

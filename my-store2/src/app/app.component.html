@@ -3,11 +3,27 @@
 <button [disabled]="btnDisabled">Enviar</button>
 <button (click)="toggleButton()">Toggle Button</button>
 
+      <!-- ? Escuchando eventos de (click) -->
+
 <p>Edad {{ person.age }}</p>
 <button (click)="ageIncrease()">Age ++</button>
 <button (click)="ageDecrease()">Age --</button>
 
+      <!-- ? Escuchando eventos de (scroll) -->
+
+<div class="box" (scroll)="onScroll($event)">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis adipisci voluptas, quos incidunt ab, nesciunt tenetur, quis optio ipsum reiciendis a odit cupiditate. Aperiam debitis quos, dolor minus accusantium corporis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis adipisci voluptas, quos incidunt ab, nesciunt tenetur, quis optio ipsum reiciendis a odit cupiditate. Aperiam debitis quos, dolor minus accusantium corporis!</p>
+</div>
+
+<br>
+
+<input type="text" [value]="person.name" (keyup)="changeName($event)">
+<p>Nombre: {{ person.name }}</p>
+
+
+
 <hr>
+
 
 
 <h1>Property binding, bueno para modificar propiedades de html</h1>
@@ -19,7 +35,10 @@
 <img width="200" [src]="person.avatar" alt="">
 
 
+
 <hr>
+
+
 
 <h1>String interpolation, bueno para trabajar con strings</h1>
 
