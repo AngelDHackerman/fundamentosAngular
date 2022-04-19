@@ -66,6 +66,7 @@ Ejemplo: el tag de una imagen, el hre='' de un link, el estado de un boton.
 0. Ejemplos: 
 
 <button [disabled]="btnDisable">Enviar</button>
+
 <input type="text" [value]="name">
 
 
