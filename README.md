@@ -139,3 +139,35 @@ luego en la seccion de **imports {}** agregar el FormsModules para que quede fun
 ```
 
 
+## Uso de *ngIf
+
+Estas son estructuras de control.
+
+*ngIf lo que se hace es tener un elemento y luego una directiva = *ngIf y luego una condicional. 
+
+- Sintaxis: 
+
+`<div *ngIf='show'> text to show </div>`
+
+
+0. Ejemplos: 
+
+
+```
+<!-- Directivas y condicionales simples -->
+
+<input type="text" required [(ngModel)]="person.name">
+<p *ngIf="person.name === 'angel'">Mi nombre es Angel</p>
+<p *ngIf="person.name === 'luis'">Mi nombre es Luis</p>
+
+<!-- Usando el bloque Else -->
+
+<input type="text" required [(ngModel)]="person.name">
+
+<p *ngIf="person.name === 'luis' && person.age >= 18; else myBlock">Mi nombre es Luis</p>
+
+<ng-template #myBlock>
+  <p>Bloque else</p>
+</ng-template>
+
+```

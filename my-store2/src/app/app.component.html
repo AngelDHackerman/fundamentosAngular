@@ -1,3 +1,19 @@
+<h1>uso de *ngIf</h1>
+
+<p>Prueba con angel o luis</p>
+
+<input type="text" required [(ngModel)]="person.name">
+<p *ngIf="person.name === 'angel'">Mi nombre es Angel</p>
+<p *ngIf="person.name === 'luis' && person.age >= 18; else myBlock">Mi nombre es Luis</p>
+
+<ng-template #myBlock>
+  <p>Bloque else</p>
+</ng-template>
+
+
+<hr>
+
+
 <h1>NgModel fusion entre escuchar eventos y setear propiedades</h1>
 
 <p>Nombre: {{ person.name }}</p>
