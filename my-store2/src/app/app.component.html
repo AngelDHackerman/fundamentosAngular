@@ -1,3 +1,22 @@
+<h1>*ngFor</h1>
+
+<input type="text" required [(ngModel)]="newName">
+<button (click)="addName()">Add name</button>   <!-- ? Agregando un nuevo nombre a la lista -->
+<ul>
+  <li *ngIf="names.length == 0">
+    No hay mas nombres
+  </li>
+  <li *ngFor="let name of names; index as i">
+    {{ i }} {{ name }}
+    <button (click)="removeName(i)">Delete</button>   <!-- ? Eliminando elementos del array con splice -->
+  </li>
+</ul>
+
+
+
+<hr>
+
+
 <h1>uso de *ngIf</h1>
 
 <p>Prueba con angel o luis</p>

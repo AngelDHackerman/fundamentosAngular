@@ -18,6 +18,9 @@ export class AppComponent {
     avatar: 'https://http.cat/506.jpg'
   }
 
+  names:string[] = ['Nico', 'Juli', 'Santiago'];
+  newName = '';
+
   toggleButton () {
     this.btnDisabled = !this.btnDisabled; // ! Asi creamos un boton que se enciende y se apaga
   }
@@ -42,6 +45,15 @@ export class AppComponent {
   changeName (event: Event) {
     const element = event.target as HTMLInputElement; // ! Asi se colocan cuando son elementos input
     this.person.name = element.value;   // * Leemos lo que esta en el input y al mismo tiempo cambiamos el valor del person.name
+  }
+
+  addName () {
+    this.names.push(this.newName);    // * esto agrega el nuevo nombre a la lista.
+    this.newName = ''; // * Esto hace que se limpie el input
+  }
+
+  removeName (index: number) {
+    this.names.splice(index, 1);    // ? para borrar valores de un array es mejor usar SPLICE()
   }
 
 }

@@ -1,4 +1,4 @@
-## fundamentosAngular
+# fundamentosAngular
 
 ## Verificando Node 
   ***usamos el comando*** `node -v` para ver la version de node
@@ -94,7 +94,7 @@ Asi es como se manejan los eventos en Angular
 `const element = event.target as HTMLInputElement;` para los <\input\ >
 
 
-## Data binding con ngModel
+## Data binding con **NgModel**
 
 Es una fusion entre escuchar un evento (event binding) y setear una propiedad. (propery binding).
 Trabaja con funciones NATIVAS de HTML por eso las validaciones se hacen en HTML.
@@ -138,6 +138,7 @@ luego en la seccion de **imports {}** agregar el FormsModules para que quede fun
 
 ```
 
+# Estructuras de control en Angular
 
 ## Uso de *ngIf
 
@@ -169,5 +170,34 @@ Estas son estructuras de control.
 <ng-template #myBlock>
   <p>Bloque else</p>
 </ng-template>
+
+```
+
+
+## uso de *ngFor
+
+Otra importate estructura de control es *ngFor, nos SIRVE para iterar un array de elementos, strings, numeros u objetos. 
+
+Los arrays deben estan en el "app.component.ts" para que los podamos usar.
+
+0. Ejemplos: 
+
+```
+<!-- Iteracion simple -->
+
+<ul>
+  <li *ngFor="let name of yourArrayHere">
+    {{ name }}
+  </li>
+</ul>
+
+<!-- Obeteniendo el indice del array -->
+
+<ul>
+  <li *ngFor="let name of yourArrayHere; index as i ">
+    {{ i }} {{ name }}
+  </li>
+</ul>
+
 
 ```
