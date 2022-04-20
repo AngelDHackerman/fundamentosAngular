@@ -133,8 +133,8 @@ luego en la seccion de **imports {}** agregar el FormsModules para que quede fun
 
 
 <p>Age: {{ person.age }}</p>
-<input type="text" required #ageInput="ngModel" [(ngModel)]="person.age">
-<p>Valid: {{ nameInput.valid }}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age">
+<p>Valid: {{ ageInput.valid }}</p>
 
 ```
 
