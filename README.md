@@ -92,3 +92,50 @@ Asi es como se manejan los eventos en Angular
 `const element = event.target as HTMLElement;` para los <\div\ >
 
 `const element = event.target as HTMLInputElement;` para los <\input\ >
+
+
+## Data binding con ngModel
+
+Es una fusion entre escuchar un evento (event binding) y setear una propiedad. (propery binding).
+Trabaja con funciones NATIVAS de HTML por eso las validaciones se hacen en HTML.
+
+- Sintaxis: 
+
+`[(ngModel)] = "someValue"`
+
+Data binding siempre **esta pendiente de los inputs** viendo el campo es valido o no aparte de sincronizar el valor. 
+
+*es necesario Angular Forms* 
+
+### Es necesario para instalar el NgModel: 
+
+en el **app.modules.ts** hay que escribir lo siguiente: 
+
+
+`import { FormsModuel } from '@angular/forms';`.
+
+
+luego en la seccion de **imports {}** agregar el FormsModules para que quede funcionando.
+
+
+
+0. Ejemplos: 
+
+```
+<p>Nombre: {{ person.name }}</p>
+<input type="text" [(ngModel)]="person.name">
+
+<!-- Haciendo validaciones nativas de Html -->
+
+<p>Nombre: {{ person.name }}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name">
+<p>Valid: {{ nameInput.valid }}</p>
+
+
+<p>Age: {{ person.age }}</p>
+<input type="text" required #ageInput="ngModel" [(ngModel)]="person.age">
+<p>Valid: {{ nameInput.valid }}</p>
+
+```
+
+
