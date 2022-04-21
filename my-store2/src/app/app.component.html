@@ -25,9 +25,9 @@
 
 <h1>*ngFor para Arrays/Objects</h1>
 
-<div>
+<div class="products--grid">
   <div *ngFor="let product of products">
-    <img [src]="product.image" width="200" alt="gatito">
+    <img [src]="product.image" alt="gatito">
     <h2>{{ product.price }}</h2>
     <p>{{ product.name }}</p>
   </div>
@@ -59,6 +59,7 @@
 <hr>
 
 
+
 <h1>uso de *ngIf</h1>
 
 <p>Prueba con angel o luis</p>
@@ -72,7 +73,9 @@
 </ng-template>
 
 
+
 <hr>
+
 
 
 <h1>NgModel fusion entre escuchar eventos y setear propiedades</h1>
@@ -88,6 +91,7 @@
 
 
 <hr>
+
 
 
 <h1>Eventos</h1>
@@ -144,4 +148,4 @@
 
 <h3>Hola, soy {{ name }} y tengo {{ age }}</h3>   <!-- ? Estas variables vienen del component.ts -->
 
-<img src={{img}} alt="image of a cat">
+<img src={{img}} width="300px" alt="image of a cat">
