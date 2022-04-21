@@ -78,13 +78,11 @@ Asi es como se manejan los eventos en Angular
 0. Ejemplos: 
 
 ```
-
 <button (click)="onSave()"> Save </button>
 
 <div class="box" (scroll)="scrollPage()">
 
 <div class="box" (scroll)="onScroll($event)">
-
 ```
 
 **Importante!!!** Hay que notar que en el evento scroll se le pasa el paramentro `($event)` esto pasa cuando manipulamos eventos diferentes al click en elemntos como los div o los input.
@@ -198,8 +196,6 @@ Los arrays deben estan en el "app.component.ts" para que los podamos usar.
     {{ i }} {{ name }}
   </li>
 </ul>
-
-
 ```
 
 
@@ -216,8 +212,6 @@ Los arrays deben estan en el "app.component.ts" para que los podamos usar.
     <p>{{ product.name }}</p>
   </div>
 </div>
-
-
 ```
 
 ### Interfaces para tipos de datos: 
@@ -231,6 +225,25 @@ export interface Product {
   image: string;
   category?: string;    // ? Este es un valor opcional por eso el ? antes de la declaracion
 }
+```
 
 
+## uso de ngSwitch
+
+```
+<input type="text" required [(ngModel)]="person.name">
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'angel'">
+    La persona es: Angel
+  </p>
+  <p *ngSwitchCase="'julian'">
+    La persona es: Julian
+  </p>
+  <p *ngSwitchCase="'carlos'">
+    La persona es: Carlos
+  </p>
+  <p *ngSwitchDefault> <!-- Defaul es para cuando no hay match con ninguno de los casos  -->
+    No hace match
+  </p>
+</div>
 ```

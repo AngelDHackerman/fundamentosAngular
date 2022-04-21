@@ -1,3 +1,28 @@
+<h1>ngSwitch</h1>
+<h6>Prueba con angel, julian o carlos</h6>
+
+<input type="text" required [(ngModel)]="person.name">
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'angel'">
+    La persona es: Angel
+  </p>
+  <p *ngSwitchCase="'julian'">
+    La persona es: Julian
+  </p>
+  <p *ngSwitchCase="'carlos'">
+    La persona es: Carlos
+  </p>
+  <p *ngSwitchDefault> <!-- Defaul es para cuando no hay match con ninguno de los casos  -->
+    No hace match
+  </p>
+</div>
+
+
+
+<hr>
+
+
+
 <h1>*ngFor para Arrays/Objects</h1>
 
 <div>
