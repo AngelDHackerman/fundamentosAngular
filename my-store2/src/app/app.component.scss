@@ -19,6 +19,21 @@
   }
 }
 
+.message-error {
+  background: red;
+  color: white;
+  opacity: 0;   // ? Esto lo hace invisible
+  transition: all linear 0.5s;
+  &.invalid {   // ! &.invalid, significa que si .message-error tambien tiene la clase .invalid, se rederizara el codigo de abajo
+    opacity: 1;
+  }
+}
+
+.estilos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
       // * Aqui son los medias queries para tablets y desktops
 
 @media screen and (min-width: 40em) {   // ? Esta medida 40em es para tablets

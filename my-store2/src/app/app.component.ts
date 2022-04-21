@@ -7,7 +7,7 @@ import { Product } from './product.model';    // ? importado la interface desde 
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-store2';
+  public widhtImg = 80;
   public name = 'Angel';    // ? Por defecto la visibilidad es public
   public age = 26;
   public img = 'https://http.cat/100.jpg';

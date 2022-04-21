@@ -1,3 +1,30 @@
+<h1>Class & Style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name">
+<p class="message-error" [class.invalid]="nameInput2.invalid">El campo es requerido</p>
+
+<label>Nombre</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name">
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">
+  Lorem ipsum dolor sit amet consectetur.
+</p>    <!-- ? Operador ternario, si invalid da true entonces: italic, si da false usara normal -->
+
+<div class="estilos">
+  <div>
+    <p>Cambia el tamaño de la imagen aqui!</p>
+    <input type="number" [(ngModel)]="widhtImg"> <!-- ? Aqui podemos manipular el tamaño de la imagen -->
+  </div>
+  <div>
+    <img [style.width.px]="widhtImg" [src]="person.avatar" >
+  </div>
+</div>
+
+
+
+
+<hr>
+
+
+
 <h1>ngSwitch</h1>
 <h6>Prueba con angel, julian o carlos</h6>
 

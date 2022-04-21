@@ -1,18 +1,19 @@
 # fundamentosAngular
 
-## Verificando Node 
+## Configuraciones basicas:
+### Verificando Node 
   ***usamos el comando*** `node -v` para ver la version de node
 
-## Verificando npm 
+### Verificando npm 
   ***usamos el comando*** `npm -v` para verificar que tenemos npm instalado
 
-## Instalando el cliente de comandos de Angular 
+### Instalando el cliente de comandos de Angular 
   ***comando:*** `npm i -g @angular/cli`
 
-## Verificando la version de angular (mejor si es en la carpeta de nuestro proyecto): 
+### Verificando la version de angular (mejor si es en la carpeta de nuestro proyecto): 
   `ng version`
 
-## Creando la primer aplicacion: 
+### Creando la primer aplicacion: 
  **comando:** `ng new appName`
 
 `Angular routing? Y`  yes para angular routing.
@@ -23,7 +24,7 @@
   `ng serve -o` *para abrir el navedador por defecto*.
   `ng serve -o --port=3500` *Cambia el puerto donde abrimos la aplicacion*.
 
-## Node Version: .nvmrc debemos AGREGAR el siguiente archivo: 
+### Node Version: .nvmrc debemos AGREGAR el siguiente archivo: 
 
   `.nvmrc` Si estas trabajando con diferentes versiones de Node, va indicar cual es la version de Node recomendada para correr este proyecto. (COPIA Y PEGA la version de Node que estas usando para el proyecto).
 
@@ -39,6 +40,8 @@ archivo de configuracion para el editor de codigo.
 **Tip:** instalar el plugin de editorconfig para que este archivo funcione correctamente.
 
 
+
+# Angular Basics: 
 
 
 ## String interpolation: 
@@ -251,3 +254,53 @@ export interface Product {
 
 # Estilos
 
+## clases dinamicas: 
+
+Asi se agregan las clases dinamicas: 
+
+```
+        <!-- De lado del HTML -->
+
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name">
+<p class="message-error" [class.invalid]="nameInput2.invalid">El campo es requerido</p>
+
+      <!-- Luego del lado del SCSS -->
+
+.message-error {
+  background: red;
+  color: white;
+  opacity: 0;   // ? Esto lo hace invisible
+  transition: all linear 0.5s;
+  &.invalid {   // ! &.invalid, significa que si .message-error tambien tiene la clase .invalid, se rederizara el codigo de abajo
+    opacity: 1;
+  }
+}
+```
+
+## Cambiado estilos, directamente: 
+
+```
+<label>Nombre</label>
+
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name">
+
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'"> <!-- Cambias el estilo aqui -->
+  Lorem ipsum dolor sit amet consectetur.
+</p>    <!-- Operador ternario, si invalid da true entonces: italic, si da false usara normal -->
+
+```
+
+
+## Cambiando el tamaño de las imagenes con el ngModel: 
+
+```
+<div class="estilos">
+  <div>
+    <p>Cambia el tamaño de la imagen aqui!</p>
+    <input type="number" [(ngModel)]="widhtImg"> <!--Aqui podemos manipular el tamaño de la imagen -->
+  </div>
+  <div>
+    <img [style.width.px]="widhtImg" [src]="person.avatar" >
+  </div>
+</div>
+```
