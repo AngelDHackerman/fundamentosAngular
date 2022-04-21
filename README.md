@@ -201,3 +201,36 @@ Los arrays deben estan en el "app.component.ts" para que los podamos usar.
 
 
 ```
+
+
+## *ngFor para arrays 
+
+0. Ejemplos: 
+
+
+```
+<div>
+  <div *ngFor="let product of products">
+    <img [src]="product.image" width="200" alt="gatito">
+    <h2>{{ product.price }}</h2>
+    <p>{{ product.name }}</p>
+  </div>
+</div>
+
+
+```
+
+### Interfaces para tipos de datos: 
+
+Es necesario el uso de la palabra **export** para poder usar esto dentro de otros archivos, por buenas practicas iria en un documento aparte del que estamos trabajando, ejemplo: 'product.model.ts'
+
+```
+export interface Product {
+  name: string;
+  price: number;
+  image: string;
+  category?: string;    // ? Este es un valor opcional por eso el ? antes de la declaracion
+}
+
+
+```

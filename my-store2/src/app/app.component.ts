@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';    // ? importado la interface desde app.models.ts
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,39 @@ export class AppComponent {
 
   names:string[] = ['Nico', 'Juli', 'Santiago'];
   newName = '';
+  products:Product[] = [    // ? Declaramos que el array products ser de tipo Product
+    {
+      name: 'EL mejor juguete',
+      price: 565,
+      image: 'https://placekitten.com/200/300',
+      category: 'all'
+    },
+    {
+      name: 'Bicicleta casi nueva',
+      price: 356,
+      image: 'https://placekitten.com/g/200/300'
+    },
+    {
+      name: 'Colleción de albumnes',
+      price: 34,
+      image: 'https://placekitten.com/200/300'
+    },
+    {
+      name: 'Mis libros',
+      price: 23,
+      image: 'https://placekitten.com/g/200/300'
+    },
+    {
+      name: 'Casa para perro',
+      price: 34,
+      image: 'https://placekitten.com/200/300'
+    },
+    {
+      name: 'Gafas',
+      price: 3434,
+      image: 'https://placekitten.com/g/200/300'
+    }
+  ]
 
   toggleButton () {
     this.btnDisabled = !this.btnDisabled; // ! Asi creamos un boton que se enciende y se apaga
