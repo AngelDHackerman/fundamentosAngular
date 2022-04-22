@@ -306,7 +306,7 @@ Asi se agregan las clases dinamicas:
 ```
 
 
-## NgClass & NgStyle 
+## NgClass
 
 0. Ejemplos de codigo: 
 
@@ -322,5 +322,41 @@ Asi se agregan las clases dinamicas:
 <p class="message-error" [class.invalid]="nameInput4.invalid">
   El campo es requerido
 </p>
+
+```
+
+
+## NgStyle:
+
+0. Ejemplos de codigo:
+
+```
+<!-- Del lado del HTML: -->
+
+<div class="styles">
+  <div>
+    <input type="number" [(ngModel)]="box.width"> <!-- ? Aqui podemos cambiar los valores a nuestro gusto -->
+    <input type="number" [(ngModel)]="box.height">
+    <input type="color" [(ngModel)]="box.background">
+  </div>
+  <div>
+    <div [ngStyle]="{
+      'width.px': box.width, 
+      'height.px': box.height,
+      'background-color': box.background,
+      'display': 'block'
+    }">
+    </div>
+  </div>
+</div>
+
+
+<!-- Del lado de app.component.ts, aqui se le van los valores iniciales -->
+
+box = { 
+    width: 100,
+    height: 100,
+    background: 'red'
+  } 
 
 ```

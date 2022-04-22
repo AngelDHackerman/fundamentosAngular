@@ -11,8 +11,24 @@
   El campo es requerido
 </p>
 
+<h2>ngStyle</h2>
 
-
+<div class="styles">
+  <div>
+    <input type="number" [(ngModel)]="box.width"> <!-- ? Aqui podemos cambiar los valores a nuestro gusto -->
+    <input type="number" [(ngModel)]="box.height">
+    <input type="color" [(ngModel)]="box.background">
+  </div>
+  <div>
+    <div [ngStyle]="{
+      'width.px': box.width,
+      'height.px': box.height,
+      'background-color': box.background,
+      'display': 'block'
+    }">
+    </div>
+  </div>
+</div>
 
 
 

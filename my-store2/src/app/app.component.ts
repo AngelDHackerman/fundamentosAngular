@@ -21,6 +21,11 @@ export class AppComponent {
 
   names:string[] = ['Nico', 'Juli', 'Santiago'];
   newName = '';
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  }
   products:Product[] = [    // ? Declaramos que el array products ser de tipo Product
     {
       name: 'EL mejor juguete',
