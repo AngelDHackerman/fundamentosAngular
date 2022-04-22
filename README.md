@@ -360,3 +360,12 @@ box = {
   } 
 
 ```
+
+
+## Creando formularios: 
+
+0. Ejemplo en codigo:
+
+```
+
+```

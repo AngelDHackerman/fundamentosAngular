@@ -1,4 +1,40 @@
-<h1>NgClass & NgStyle</h1>
+<h1>Formulario</h1>
+
+<form (ngSubmit)="onRegister()" #myFormulario="ngForm">
+
+<div class="input-group">
+
+<div>
+  <label for="name">Nombre</label>
+  <input type="text" name="name" required id="name" [(ngModel)]="register.name">
+  <p>Mensajes de error</p>
+</div>
+
+<div>
+  <label for="email">Email</label>
+  <input type="email" name="email" required id="email" [(ngModel)]="register.email">
+  <p>Mensajes de error</p>
+</div>
+
+<div>
+  <label for="password">Password</label>
+  <input type="password" name="password" required id="password">
+  <p>Mensajes de error</p>
+</div>
+
+</div>
+
+<button [disabled]="myFormulario.invalid" type="submit">Registrar</button> <!-- ? [disabled]="myFormulario.invalid" asi desabilitamos el boton si los campos no son validos -->
+
+</form>
+
+
+<hr>
+
+
+<h1>NgClass</h1>
+<h6>Escribe algo o deja vacio el input</h6>
+
 <input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name">
 
 <hr class="line-error"

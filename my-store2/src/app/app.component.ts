@@ -19,6 +19,12 @@ export class AppComponent {
     avatar: 'https://http.cat/506.jpg'
   }
 
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
+
   names:string[] = ['Nico', 'Juli', 'Santiago'];
   newName = '';
   box = {
@@ -93,6 +99,10 @@ export class AppComponent {
 
   removeName (index: number) {
     this.names.splice(index, 1);    // ? para borrar valores de un array es mejor usar SPLICE()
+  }
+
+  onRegister () {
+    console.log(this.register)
   }
 
 }
