@@ -304,3 +304,23 @@ Asi se agregan las clases dinamicas:
   </div>
 </div>
 ```
+
+
+## NgClass & NgStyle 
+
+0. Ejemplos de codigo: 
+
+```
+<input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name">
+
+<hr class="line-error" 
+  [ngClass]="{
+    'valid': nameInput4.valid,  <!-- ! Agrega la clase 'valid' si y solo si nameInput4 es valid -->
+    'invalid': nameInput4.invalid <!-- ! Agrega la clase 'invalid' si y solo si nameInput4 es invalid -->
+  }">
+
+<p class="message-error" [class.invalid]="nameInput4.invalid">
+  El campo es requerido
+</p>
+
+```
