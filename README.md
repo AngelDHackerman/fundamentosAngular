@@ -297,10 +297,10 @@ Asi se agregan las clases dinamicas:
 <div class="estilos">
   <div>
     <p>Cambia el tamaño de la imagen aqui!</p>
-    <input type="number" [(ngModel)]="widhtImg"> <!--Aqui podemos manipular el tamaño de la imagen -->
+    <input type="number" [(ngModel)]="widthImg"> <!--Aqui podemos manipular el tamaño de la imagen -->
   </div>
   <div>
-    <img [style.width.px]="widhtImg" [src]="person.avatar" >
+    <img [style.width.px]="widthImg" [src]="person.avatar" >
   </div>
 </div>
 ```
@@ -361,11 +361,3 @@ box = {
 
 ```
 
-
-## Creando formularios: 
-
-0. Ejemplo en codigo:
-
-```
-
-```
